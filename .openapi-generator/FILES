@@ -45,6 +45,7 @@ model/spaceReservationFeature.ts
 model/spaceReservationFeatureRequest.ts
 model/spaceReservationGroupedResponse.ts
 model/spaceReservationResponse.ts
+model/subscriptionProductResponse.ts
 model/subscriptionResponse.ts
 model/subscriptionStatusResponse.ts
 model/unauthorizedError401Response.ts

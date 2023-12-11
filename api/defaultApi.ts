@@ -1427,8 +1427,9 @@ export class DefaultApi {
      * @summary Get rentals
      * @param orgId The Organization ID
      * @param siteId The Site ID
+     * @param accountId The Account ID
      */
-    public async getRentals (orgId: string, siteId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetRental200Response;  }> {
+    public async getRentals (orgId: string, siteId: string, accountId?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetRental200Response;  }> {
         const localVarPath = this.basePath + '/lease/orgs/{orgId}/sites/{siteId}/rentals'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)))
             .replace('{' + 'siteId' + '}', encodeURIComponent(String(siteId)));
@@ -1451,6 +1452,10 @@ export class DefaultApi {
         // verify required parameter 'siteId' is not null or undefined
         if (siteId === null || siteId === undefined) {
             throw new Error('Required parameter siteId was null or undefined when calling getRentals.');
+        }
+
+        if (accountId !== undefined) {
+            localVarQueryParameters['accountId'] = ObjectSerializer.serialize(accountId, "string");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

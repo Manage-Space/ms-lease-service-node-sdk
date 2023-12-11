@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { RentalStatus } from './rentalStatus';
 import { RentalType } from './rentalType';
+import { SubscriptionProductResponse } from './subscriptionProductResponse';
 
 export class RentalResponse {
     /**
@@ -97,6 +98,10 @@ export class RentalResponse {
     * Created at.
     */
     'createdAt': Date;
+    /**
+    * Sub products on the rental
+    */
+    'subscriptionProducts': Array<SubscriptionProductResponse>;
 
     static discriminator: string | undefined = undefined;
 
@@ -210,6 +215,11 @@ export class RentalResponse {
             "name": "createdAt",
             "baseName": "createdAt",
             "type": "Date"
+        },
+        {
+            "name": "subscriptionProducts",
+            "baseName": "subscriptionProducts",
+            "type": "Array<SubscriptionProductResponse>"
         }    ];
 
     static getAttributeTypeMap() {

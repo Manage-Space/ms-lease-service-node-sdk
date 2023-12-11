@@ -41,6 +41,7 @@ export * from './spaceReservationFeature';
 export * from './spaceReservationFeatureRequest';
 export * from './spaceReservationGroupedResponse';
 export * from './spaceReservationResponse';
+export * from './subscriptionProductResponse';
 export * from './subscriptionResponse';
 export * from './subscriptionStatusResponse';
 export * from './unauthorizedError401Response';
@@ -103,6 +104,7 @@ import { SpaceReservationFeature } from './spaceReservationFeature';
 import { SpaceReservationFeatureRequest } from './spaceReservationFeatureRequest';
 import { SpaceReservationGroupedResponse } from './spaceReservationGroupedResponse';
 import { SpaceReservationResponse } from './spaceReservationResponse';
+import { SubscriptionProductResponse } from './subscriptionProductResponse';
 import { SubscriptionResponse } from './subscriptionResponse';
 import { SubscriptionStatusResponse } from './subscriptionStatusResponse';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
@@ -168,6 +170,7 @@ let typeMap: {[index: string]: any} = {
     "SpaceReservationFeatureRequest": SpaceReservationFeatureRequest,
     "SpaceReservationGroupedResponse": SpaceReservationGroupedResponse,
     "SpaceReservationResponse": SpaceReservationResponse,
+    "SubscriptionProductResponse": SubscriptionProductResponse,
     "SubscriptionResponse": SubscriptionResponse,
     "SubscriptionStatusResponse": SubscriptionStatusResponse,
     "UnauthorizedError401Response": UnauthorizedError401Response,
