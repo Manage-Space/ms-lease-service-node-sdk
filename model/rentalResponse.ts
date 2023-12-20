@@ -70,6 +70,10 @@ export class RentalResponse {
     */
     'intendedMoveOutDate': Date | null;
     /**
+    * MoveIn date.
+    */
+    'moveInDate': Date | null;
+    /**
     * Move out date.
     */
     'moveOutDate': Date | null;
@@ -174,6 +178,11 @@ export class RentalResponse {
         {
             "name": "intendedMoveOutDate",
             "baseName": "intendedMoveOutDate",
+            "type": "Date"
+        },
+        {
+            "name": "moveInDate",
+            "baseName": "moveInDate",
             "type": "Date"
         },
         {
