@@ -4,11 +4,6 @@ export * from './accountStatsSpaceReservation';
 export * from './badRequestError400Response';
 export * from './badRequestError400ResponseError';
 export * from './baseError';
-export * from './calculateProratedAmountForFutureDate200Response';
-export * from './calculateProratedAmountRequest';
-export * from './calculateProratedAmountResponse';
-export * from './createMoveOut200Response';
-export * from './createMoveOutRequest';
 export * from './createMoveOutV2200Response';
 export * from './createMoveOutV2Request';
 export * from './createReservation200Response';
@@ -19,17 +14,11 @@ export * from './createSpaceReservationRequest';
 export * from './forbiddenError403Response';
 export * from './forbiddenError403ResponseError';
 export * from './getGroupedSpaceReservationBySiteId200Response';
-export * from './getLease200Response';
 export * from './getRental200Response';
 export * from './getRentalAgreements200Response';
 export * from './getSpaceReservationsByAccount200Response';
-export * from './getSubscriptions200Response';
 export * from './internalServerError500Response';
 export * from './internalServerError500ResponseError';
-export * from './lease';
-export * from './leaseResponse';
-export * from './leaseResponseSubscription';
-export * from './moveOutResponse';
 export * from './moveOutV2Response';
 export * from './rentalAgreementResponse';
 export * from './rentalResponse';
@@ -42,11 +31,8 @@ export * from './spaceReservationFeatureRequest';
 export * from './spaceReservationGroupedResponse';
 export * from './spaceReservationResponse';
 export * from './subscriptionProductResponse';
-export * from './subscriptionResponse';
-export * from './subscriptionStatusResponse';
 export * from './unauthorizedError401Response';
 export * from './unauthorizedError401ResponseError';
-export * from './updateIntendedMoveOutDateRequest';
 export * from './updateRentalIntendedMoveOutDateRequest';
 export * from './updateReservationRequest';
 
@@ -67,11 +53,6 @@ import { AccountStatsSpaceReservation } from './accountStatsSpaceReservation';
 import { BadRequestError400Response } from './badRequestError400Response';
 import { BadRequestError400ResponseError } from './badRequestError400ResponseError';
 import { BaseError } from './baseError';
-import { CalculateProratedAmountForFutureDate200Response } from './calculateProratedAmountForFutureDate200Response';
-import { CalculateProratedAmountRequest } from './calculateProratedAmountRequest';
-import { CalculateProratedAmountResponse } from './calculateProratedAmountResponse';
-import { CreateMoveOut200Response } from './createMoveOut200Response';
-import { CreateMoveOutRequest } from './createMoveOutRequest';
 import { CreateMoveOutV2200Response } from './createMoveOutV2200Response';
 import { CreateMoveOutV2Request } from './createMoveOutV2Request';
 import { CreateReservation200Response } from './createReservation200Response';
@@ -82,17 +63,11 @@ import { CreateSpaceReservationRequest } from './createSpaceReservationRequest';
 import { ForbiddenError403Response } from './forbiddenError403Response';
 import { ForbiddenError403ResponseError } from './forbiddenError403ResponseError';
 import { GetGroupedSpaceReservationBySiteId200Response } from './getGroupedSpaceReservationBySiteId200Response';
-import { GetLease200Response } from './getLease200Response';
 import { GetRental200Response } from './getRental200Response';
 import { GetRentalAgreements200Response } from './getRentalAgreements200Response';
 import { GetSpaceReservationsByAccount200Response } from './getSpaceReservationsByAccount200Response';
-import { GetSubscriptions200Response } from './getSubscriptions200Response';
 import { InternalServerError500Response } from './internalServerError500Response';
 import { InternalServerError500ResponseError } from './internalServerError500ResponseError';
-import { Lease } from './lease';
-import { LeaseResponse } from './leaseResponse';
-import { LeaseResponseSubscription } from './leaseResponseSubscription';
-import { MoveOutResponse } from './moveOutResponse';
 import { MoveOutV2Response } from './moveOutV2Response';
 import { RentalAgreementResponse } from './rentalAgreementResponse';
 import { RentalResponse } from './rentalResponse';
@@ -105,11 +80,8 @@ import { SpaceReservationFeatureRequest } from './spaceReservationFeatureRequest
 import { SpaceReservationGroupedResponse } from './spaceReservationGroupedResponse';
 import { SpaceReservationResponse } from './spaceReservationResponse';
 import { SubscriptionProductResponse } from './subscriptionProductResponse';
-import { SubscriptionResponse } from './subscriptionResponse';
-import { SubscriptionStatusResponse } from './subscriptionStatusResponse';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
 import { UnauthorizedError401ResponseError } from './unauthorizedError401ResponseError';
-import { UpdateIntendedMoveOutDateRequest } from './updateIntendedMoveOutDateRequest';
 import { UpdateRentalIntendedMoveOutDateRequest } from './updateRentalIntendedMoveOutDateRequest';
 import { UpdateReservationRequest } from './updateReservationRequest';
 
@@ -135,11 +107,6 @@ let typeMap: {[index: string]: any} = {
     "BadRequestError400Response": BadRequestError400Response,
     "BadRequestError400ResponseError": BadRequestError400ResponseError,
     "BaseError": BaseError,
-    "CalculateProratedAmountForFutureDate200Response": CalculateProratedAmountForFutureDate200Response,
-    "CalculateProratedAmountRequest": CalculateProratedAmountRequest,
-    "CalculateProratedAmountResponse": CalculateProratedAmountResponse,
-    "CreateMoveOut200Response": CreateMoveOut200Response,
-    "CreateMoveOutRequest": CreateMoveOutRequest,
     "CreateMoveOutV2200Response": CreateMoveOutV2200Response,
     "CreateMoveOutV2Request": CreateMoveOutV2Request,
     "CreateReservation200Response": CreateReservation200Response,
@@ -150,17 +117,11 @@ let typeMap: {[index: string]: any} = {
     "ForbiddenError403Response": ForbiddenError403Response,
     "ForbiddenError403ResponseError": ForbiddenError403ResponseError,
     "GetGroupedSpaceReservationBySiteId200Response": GetGroupedSpaceReservationBySiteId200Response,
-    "GetLease200Response": GetLease200Response,
     "GetRental200Response": GetRental200Response,
     "GetRentalAgreements200Response": GetRentalAgreements200Response,
     "GetSpaceReservationsByAccount200Response": GetSpaceReservationsByAccount200Response,
-    "GetSubscriptions200Response": GetSubscriptions200Response,
     "InternalServerError500Response": InternalServerError500Response,
     "InternalServerError500ResponseError": InternalServerError500ResponseError,
-    "Lease": Lease,
-    "LeaseResponse": LeaseResponse,
-    "LeaseResponseSubscription": LeaseResponseSubscription,
-    "MoveOutResponse": MoveOutResponse,
     "MoveOutV2Response": MoveOutV2Response,
     "RentalAgreementResponse": RentalAgreementResponse,
     "RentalResponse": RentalResponse,
@@ -171,11 +132,8 @@ let typeMap: {[index: string]: any} = {
     "SpaceReservationGroupedResponse": SpaceReservationGroupedResponse,
     "SpaceReservationResponse": SpaceReservationResponse,
     "SubscriptionProductResponse": SubscriptionProductResponse,
-    "SubscriptionResponse": SubscriptionResponse,
-    "SubscriptionStatusResponse": SubscriptionStatusResponse,
     "UnauthorizedError401Response": UnauthorizedError401Response,
     "UnauthorizedError401ResponseError": UnauthorizedError401ResponseError,
-    "UpdateIntendedMoveOutDateRequest": UpdateIntendedMoveOutDateRequest,
     "UpdateRentalIntendedMoveOutDateRequest": UpdateRentalIntendedMoveOutDateRequest,
     "UpdateReservationRequest": UpdateReservationRequest,
 }
